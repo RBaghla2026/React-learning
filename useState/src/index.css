@@ -10,12 +10,29 @@ body {
   height: 100%;
 }
 
+body {
+  background: #f4f6fb;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .child {
   width: 250px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.child:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .child img {
@@ -24,25 +41,26 @@ body {
   object-fit: cover;
 }
 
+.child h4 {
+  padding: 10px 12px 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.child p {
+  padding: 2px 12px;
+  font-size: 13px;
+  color: #666;
+}
+
 .container {
   display: flex;
   gap: 7px;
 }
 
-p {
-  padding: 5px;
-}
-
-h4 {
-  padding: 5px;
-}
-
-.header {
-  height: 40px;
-  padding: 10px;
-}
-
 button {
+  padding: 5px;
   margin: 5px;
 }
 
@@ -54,28 +72,40 @@ button {
 .shimmer-card {
   width: 250px;
   padding: 12px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.shimmer-img,
+.shimmer-line {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
 }
 
 .shimmer-img {
-  height: 100px;
+  height: 120px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #eeeeee 25%, #dddddd 37%, #eeeeee 63%);
-  background-size: 400% 100%;
-  animation: shimmer 1.4s ease infinite;
 }
 
 .shimmer-line {
   height: 14px;
   margin-top: 12px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #eeeeee 25%, #dddddd 37%, #eeeeee 63%);
-  background-size: 400% 100%;
-  animation: shimmer 1.4s ease infinite;
 }
 
 .shimmer-line.short {
   width: 60%;
+}
+
+.rating {
+  display: inline-block;
+  margin: 8px 12px 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e9f5ff;
+  color: #1e88e5;
 }

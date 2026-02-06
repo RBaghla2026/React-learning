@@ -10,7 +10,7 @@ const Card = ({ name, gender, designation, summary, rating }) => {
       <hr />
       <p>{designation}</p>
       <p>{summary}</p>
-      <p>Rating: {rating}</p>
+      <p className="rating"> Rating: ⭐ {rating}</p>
     </div>
   );
 };

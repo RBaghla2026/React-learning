@@ -45,34 +45,33 @@ function App() {
   const [employeelist, setemployeelist] = useState([]);
 
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = () => {
     setTimeout(() => {
       setemployeelist(data);
     }, 2000);
-  };
+  }, []);
 
   return employeelist.length === 0 ? (
     <Shimmer />
   ) : (
     <>
       <div className="header">
-        <button
-          onClick={() => {
-            setemployeelist(employeelist.filter((item) => item.rating > 4));
-          }}
-        >
-          Top Rated Employees
-        </button>
-        <button
-          onClick={() => {
-            setemployeelist(data);
-          }}
-        >
-          Reset
-        </button>
+        <div className="leftheader"></div>
+        <div className="rightheader">
+          <button
+            onClick={() => {
+              setemployeelist(employeelist.filter((item) => item.rating > 4));
+            }}
+          >
+            Top Rated Employees
+          </button>
+          <button
+            onClick={() => {
+              setemployeelist(data);
+            }}
+          >
+            Reset
+          </button>
+        </div>
       </div>
       <div className="container">
         {employeelist.map((item) => (
